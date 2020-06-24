@@ -1,10 +1,73 @@
 # fuzzDicts
 Web Pentesting Fuzz 字典,一个就够了。
 
-
 ## log 
 
 不定期更新，使用前建议git pull一下，同步更新。
+
+
+20200510:
+
+* 用户名字典下新增了一个百家姓top3000的拼音，去重后188条，Attack!!!.
+
+
+20200420:
+
+* 合并一个由[lanyi1998](https://github.com/lanyi1998)提交的pr，测试常用手机号码top300+，放在用户名字典里面，瓶颈测试时可以试试；添加一份团队Child师傅提供的某集团的弱口令字典。
+
+20200410:
+
+* 上传了centos和aix的/etc/目录，放在ssrfDict里面，aix和其他系统区别还是蛮大的，实战一下RFI注意区别。
+
+20200406:
+
+* 合并一个由[lewiswu1209](https://github.com/lewiswu1209)提交的pr，密码top19576。
+
+20200410:
+
+* 新增centOS和AIX主机的/etc/目录的文件列表，放在ssrfDict目录，实战中遇到的，aix和其他系统区别还是蛮大的，作用自己琢磨。
+
+
+20200318:
+
+**带中文的那个hk字典和这个项目没有半毛钱关系，已有的字典源自给小伙伴测试博客时得出得结论(密码和id关联度很高),所以才基于404notfound师傅的成果分离了一些字段,方便爆破shell之类的,不希望在字典内得可已自己提交pr删一下。至于怕被查什么的，本身404notfound师傅那边就有完整的了,这边不是源头删了也没啥用,再者，已经有公司专门做这样的事情了(给攻击者画像)，保护没做好只要犯事都跑不掉的...**
+
+20200311:
+
+* 黑阔字典原始数据非本人采集，我只是提取了404notfound师傅的成果中的字段，采集本身就不可能全面覆盖到整个行业所有师傅，如果有想把其他师傅加入名单的师傅可以私聊我或者提交commit啊。[手动狗头]
+
+20200221:
+
+* 更新由[makoto56](https://github.com/makoto56)师傅加强后的webshell密码字典,离职学习中，毕业前不会有太多的web测试任务（也不想再继续打web了），字典更新频率会降低很多，如果有小伙伴想一起维护可以联系我啊。
+
+20200211:
+
+* 新增一个lot字典，数据来源于tg群里别人发的50w互联网lot设备弱口令，由[sunu11](https://github.com/sunu11)师傅提取，在此基础上添加了国内的数据。遇到不知名的设备时一阵爆怼咯，擅用字典，事半功倍。
+
+20200115:
+
+* xss字典增加burp官方的210条payload，放在easyXssPayload目录下的[burpXssPayload.txt](https://github.com/TheKingOfDuck/fuzzDicts/blob/master/easyXssPayload/burpXssPayload.txt)文件中。
+
+* 用户名字典增加了2018-2020青年安全圈黑阔们的id，数据来源[Security-Data-Analysis-and-Visualization](https://github.com/404notf0und/Security-Data-Analysis-and-Visualization)，分离了id,博客域名,github ID三个字段。放在userNameDict目录下[sec_ID.txt](https://github.com/TheKingOfDuck/fuzzDicts/blob/master/userNameDict/sec_id.txt),遇到shell先去撞一下,自建waf这些id都标记为黑名单关键字就对了。
+
+* 其他优化，更新。
+
+
+20200106:
+
+* xss字典增加100+条新Payload，并合并到本项目。
+
+20200104:
+
+* 再次优化参数字典，感谢[key师傅](https://github.com/gh0stkey)的修正。
+
+20191219:
+
+* 使用正则`(\W)`过滤了很多无效的参数,如空格(){}等等,并允许-的存在，重新合并去重了一下参数字典，均放在AllParam.txt，感谢奶权师傅的反馈。
+
+20191214:
+
+* 最近在整理各CMS的漏洞，前前后后下载了50多个CMS,顺便重新采集了一下参数，parameter.txt的体积增加到5859条。（原2800+）
 
 20191106:
 
